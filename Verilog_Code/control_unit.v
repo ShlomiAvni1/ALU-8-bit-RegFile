@@ -22,7 +22,7 @@ module control_unit (clk, reset, instr, opcode, ra1, ra2, wa, we, pc, done);
   output reg [7:0] pc;        // program counter (for instruction memory)
   output reg done;            // signals when program is finished
 
-  // FSM states (Verilog classic syntax)
+  // FSM states 
   reg [2:0] state, next_state;
 
   parameter S_FETCH     = 3'b000;
@@ -91,6 +91,7 @@ module control_unit (clk, reset, instr, opcode, ra1, ra2, wa, we, pc, done);
       S_DONE: begin
         done = 1'b1;
         we = 1'b0;
+		next_state = S_DONE;
       end
 
       default: next_state = S_FETCH;
