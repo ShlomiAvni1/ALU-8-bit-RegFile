@@ -28,7 +28,7 @@ The CPU executes instructions stored in external memory and follows a clear Fetc
 
 ## Author
 *Shlomi Avni*  
-B.Sc. Electrical Engineering, Bar-Ilan University  
+B.Sc. Computer Engineering, Bar-Ilan University  
 Focus: Digital Systems, RTL Design, and VLSI Architecture
 
 ---
