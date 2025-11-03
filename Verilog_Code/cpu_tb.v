@@ -45,7 +45,7 @@ module cpu_tb;
     $display("---------------------------------------------------------------------------------------------");
 
     // Print every cycle on posedge
-    repeat (96) begin
+    repeat (100) begin
       @(posedge clk);
       $display("%8t | %2d |   %03b   |  %02b  |  %02b  | %02b |  %02h  |  %02h  |  %02h  |  %02h  |  %02h  | %1b | %1b |  %03b  |  %1b",
         $time,
