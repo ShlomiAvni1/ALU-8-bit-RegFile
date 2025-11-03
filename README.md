@@ -232,6 +232,32 @@ gtkwave cpu.vcd
 
 ---
 
+## Waveform Results
+
+Simulation waveforms showing CPU operation through FSM stages.
+
+### Overview
+Full instruction sequence across FETCH, EXECUTE, WRITEBACK, and DONE states.
+
+![Overview](./Assets/waveform_overview.jpg)
+
+### Execute Stage
+ALU performs the operation defined by the opcode using source registers ra1 and ra2.
+
+![Execute](./Assets/waveform_execute.jpg)
+
+### Writeback Stage
+ALU result (y) is written back to the destination register (wa) when we=1.
+
+![Writeback](./Assets/waveform_writeback.jpg)
+
+### Done State
+Final state where the program completes and done is asserted high.
+
+![Done](./Assets/waveform_done.jpg)
+
+---
+
 ## Conclusion  
 The design and implementation of the *8-bit CPU* were successfully completed, demonstrating a fully functional processor built entirely from fundamental digital logic modules. The system integrates an *ALU, **Register File, **Control Unit, **Datapath, and **Instruction Memory*, all operating under a single clock domain and coordinated through a finite state machine.  
 
