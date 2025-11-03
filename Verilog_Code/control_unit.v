@@ -59,10 +59,13 @@ module control_unit (clk, reset, instr, opcode, ra1, ra2, wa, we, pc, done);
 
     case (state)
       // FETCH – load current instruction from memory
-      S_FETCH: begin
+	  S_FETCH: begin
         {opcode, ra1, ra2, wa} = instr;  // decode instruction
-        next_state = S_EXECUTE;
-      end
+        if (instr === 9'bxxxxxxxxx)
+          next_state = S_DONE;
+        else
+          next_state = S_EXECUTE;
+      	end
 
       // EXECUTE – perform ALU operation
       S_EXECUTE: begin
